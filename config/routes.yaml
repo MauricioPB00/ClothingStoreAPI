@@ -1,0 +1,7 @@
+api_login:
+  path: /api/login
+
+register:
+    path: /api/register
+    controller: App\Controller\AuthController::register
+    methods: POST
