@@ -65,28 +65,6 @@ class User implements UserInterface
     private $cidade;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $horTrab;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $wage;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $job;
-
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $file;
-
-    
-    /**
      * @return string|null
      */
     public function getSalt(): ?string
@@ -214,54 +192,6 @@ class User implements UserInterface
     public function setCidade(?string $cidade): self
     {
         $this->cidade = $cidade;
-
-        return $this;
-    }
-
-    public function getHorTrab(): ?string
-    {
-        return $this->horTrab;
-    }
-
-    public function setHorTrab(?string $horTrab): self
-    {
-        $this->horTrab = $horTrab;
-
-        return $this;
-    }
-
-    public function getWage(): ?string
-    {
-        return $this->wage;
-    }
-
-    public function setWage(?string $wage): self
-    {
-        $this->wage = $wage;
-
-        return $this;
-    }
-
-    public function getJob(): ?string
-    {
-        return $this->job;
-    }
-
-    public function setJob(?string $job): self
-    {
-        $this->job = $job;
-
-        return $this;
-    }
-
-    public function getFile(): ?string
-    {
-        return $this->file;
-    }
-
-    public function setFile(?string $file): self
-    {
-        $this->file = $file;
 
         return $this;
     }
