@@ -39,6 +39,11 @@ class Clothes
     private $bought;              //comprado
 
     /**
+     * @ORM\Column(type="integer")
+     */
+    private $suppliers;      
+
+    /**
      * @return string|null
      */
     public function getSalt(): ?string
@@ -95,6 +100,18 @@ class Clothes
     public function setbought(string $bought): self
     {
         $this->bought = $bought;
+
+        return $this;
+    }
+
+    public function getsuppliers(): ?string
+    {
+        return $this->suppliers;
+    }
+
+    public function setsuppliers(string $suppliers): self
+    {
+        $this->suppliers = $suppliers;
 
         return $this;
     }
